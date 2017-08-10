@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>DeathGhost-我的购物车</title>
+<meta name="keywords" content="DeathGhost,DeathGhost.cn,web前端设,移动WebApp开发" />
+<meta name="description" content="DeathGhost.cn::H5 WEB前端设计开发!" />
+<meta name="author" content="DeathGhost"/>
+<link href="/style/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/js/public.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jqpublic.js"></script>
+<script type="text/javascript" src="/js/cart.js"></script>
+
+</head>
+<body>
+<header>
+ <section class="Topmenubg">
+  <div class="Topnav">
+   <div class="LeftNav">
+    {if empty($Think.session.name || $Think.session.openid)}
+    <a href="/index/user/register">注册</a>
+    /
+    <a href="/index/user/login">登录</a>
+    {else}
+      欢迎，{$Think.session.name}  {$Think.session.nickname}
+    {/if}
+    <a href="#">QQ客服</a><a href="#">微信客服</a>
+   </div>
+   <div class="RightNav">
+    {if $Think.session.type == 0}
+      <a href="/index/info/user_center">用户中心</a>
+      {else}
+        <a href="/admin/user/login">管理中心</a>
+    {/if}
+    <a href="user_orderlist.html" target="_blank" title="我的订单">我的订单</a>
+    <a href="/index/index/cart">购物车
+      (<span style='color:red;'>
+        {if $cart != 0} 
+            {$cart} 
+            {else} 0
+        {/if} </span>)
+    </a>
+    <a href="user_favorites.html" target="_blank" title="我的收藏">我的收藏</a> 
+    <a href="#">商家入驻</a>
+	<a href="/index/user/logout">退出</a>
+   </div>
+  </div>
+ </section>
+ <div class="Logo_search">
+  <div class="Logo">
+   <a href='/index/index/index'><img src="/images/logo.jpg" title="DeathGhost" alt="模板"></a>
+   <i></i>
+   <span>西安市 [ <a href="#">莲湖区</a> ]</span>
+  </div>
+  <div class="Search"> 
+   <form method="get" id="main_a_serach" onsubmit="return check_search(this)">
+   <div class="Search_nav" id="selectsearch">
+    <a href="javascript:;" onClick="selectsearch(this,'restaurant_name')" class="choose">餐厅</a>
+    <a href="javascript:;" onClick="selectsearch(this,'food_name')">食物名</a>
+   </div>
+   <div class="Search_area"> 
+   <input type="search" id="fkeyword" name="keyword" placeholder="请输入您所需查找的餐厅名称或食物名称..." class="searchbox" />
+   <input type="submit" class="searchbutton" value="搜 索" />
+   </div>
+   </form>
+   <p class="hotkeywords"><a href="#" title="酸辣土豆丝">酸辣土豆丝</a><a href="#" title="这里是产品名称">螃蟹炒年糕</a><a href="#" title="这里是产品名称">牛奶炖蛋</a><a href="#" title="这里是产品名称">芝麻酱凉面</a><a href="#" title="这里是产品名称">滑蛋虾仁</a><a href="#" title="这里是产品名称">蒜汁茄子</a></p>
+  </div>
+ </div>
+ <nav class="menu_bg">
+  <ul class="menu">
+   <li><a href="/index/index/index">首页</a></li>
+   <li><a href="list.html">订餐</a></li>
+   <li><a href="category.html">积分商城</a></li>
+   <li><a href="article_read.html">关于我们</a></li>
+  </ul>
+ </nav>
+</header>
+
+<!--Start content-->
+<form action="/index/order/submitOrder" method='post' id='formid'>
+ <div class="gwc" style=" margin:auto;">
+  <table cellpadding="0" cellspacing="0" class="gwc_tb1">
+    <tr>
+      <td class="tb1_td1"><input id="Checkbox1" type="checkbox"  class="allselect"/></td>
+      <td class="tb1_td1">全选</td>
+      <td class="tb1_td3">商品</td>
+      <td class="tb1_td4">原价</td>
+      <td class="tb1_td5">数量</td>  
+      <td class="tb1_td6">总计(优惠价)</td>
+      <td class="tb1_td7">操作</td>
+    </tr>
+  </table>
+
+   <!-- 购物车详情 -->
+  <table cellpadding="0" cellspacing="0" class="gwc_tb2" id="table1">
+  {if !empty($re)}
+    {foreach $re as $value}
+      {foreach $address as $val}
+        {if $value['mid'] == $val['mid']}
+        <tr>
+          <td colspan="7" class="shopname Font14 FontW">店铺:{$val['address']}</td>
+        </tr>
+        {/if}
+      {/foreach}
+      <tr id="tr-{$value['mid']}" class="menu">
+        <!-- 全选 -->
+        <td class="tb2_td1">
+          <input type="checkbox" value="{$value['mid']}" name="mid[]" class="mid-{$value['mid']}"/>
+         
+        </td>
+        
+        <!-- 商品 -->
+        <td class="tb2_td2"><a href="detailsp.html" target="_blank">
+          <img src="{$value['picture']}"/></a>
+        </td>
+        <td class="tb2_td3">
+          <a href="/index/index/detailsp?mid={$value['mid']}" target="_blank">{$value['name']}</a>
+        </td>
+
+        <!-- 优惠价 -->
+        <td class="tb1_td4">
+          <s>￥<span id="p-{$value['mid']}">{$value['discount']}.00</span></s>
+        </td>
+
+        <!-- 数量 -->
+        <td class="tb1_td5">
+          <input class='text_box1'  name="num[]" type="text" value="{$value['num']}" style=" width:40px;height:28px; text-align:center; border:1px solid #ccc;" onblur="changeNum({$value['mid']},this.value)" id="mid-{$value['mid']}"/>
+        </td>
+
+        <!-- 优惠总价 -->
+        <td class="tb1_td6">
+          <label  class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"> ￥<span id="total-{$value['mid']}">{$value['num']*$value['discount']}</span></label>
+        </td>
+
+        <!-- 操作 -->
+        <td class="tb1_td7">
+          <a href="javascript:delPro({$value['mid']})" >删除</a>
+        </td>
+      </tr>
+    {/foreach}
+  {/if}
+  </table>
+  
+  <table cellpadding="0" cellspacing="0" class="gwc_tb3">
+    <tr>
+      <td class="tb1_td1"><input id="checkAll" class="allselect" type="checkbox" /></td>
+      <td class="tb1_td1">全选</td>
+      <td class="tb3_td1">
+        <input id="invert" type="checkbox" />反选
+        <input id="cancel" type="checkbox" />取消 
+      </td>
+      <td class="tb3_td2 GoBack_Buy Font14">
+        <a href="/index/index/index" target="_self">继续购物</a>
+      </td>
+      <td><input type="button" value='清空购物车' class='btn_blue_1' onclick="clearCart()"/></td>
+      <td class="tb3_td2">
+        已选商品
+        <label id="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">{$count}</label>
+        件
+      </td>
+
+      <td class="tb3_td3">合计(不含运费):
+        <span>￥</span>
+        <span style=" color:#ff5500;">
+          <label id="zong1" style="color:#ff5500;font-size:20px; font-weight:bold;">00.00</label>
+        </span>
+      </td>
+
+      <td class="tb3_td4">
+        <span id="jz1">结算</span>
+        <input type="button" class='jz2' id='jz2' value='结算' style="display:none;"/>
+      </td>
+    </tr>
+  </table>
+</div>
+</form>
+
+<script type="text/javascript">
+  //改变商品的数量   
+  function changeNum(mid,num) {
+      // 通过ajax将对应商品的数量进行操作
+      var url = '/index/index/changeNum';
+      var data = {'mid':mid,'num':num};
+      var success = function(response) {
+          if (response != 0) {
+            var aa = '#mid-'+mid;
+            var price = ($(aa).val())*$("#p-"+mid).html();//单价
+            var a = $('#total-'+mid).html(price);
+            console.log($(aa).val());
+          }
+      }
+
+      $.post(url,data,success,'json');
+  }
+
+  //删除购物车中的商品
+  function delPro(mid) {
+    //通过ajax将商品的id传递给php脚本进行数据库的删除
+    var url = "/index/index/deleteProduct";
+    var data = {'mid':mid};
+    var success = function(response) {
+      console.log(response);
+      if (response != 0) {
+        console.log(response);
+          $('#tr-'+mid).remove();
+          //清空店铺名
+          $('.menu').siblings().children().remove();
+      }
+    }
+    $.get(url,data,success,'json');
+  }
+
+  //清空购物车
+  function clearCart() {
+    var url = '/index/index/clear';
+    var success = function(response) {
+      console.log(response);
+      if (response == 0) {
+        $('.menu').remove();
+
+        //清空店铺名
+        $('.menu').siblings().children().remove();
+      }
+    }
+    $.get(url,success,'json');
+  }
+
+  //提交订单
+  $('#jz2').click(function() {
+    var url = '/index/order/submitOrder';
+    var data = $('#formid').serializeArray();
+    var success = function(response) {
+       console.log(response);
+       if (response != 0) {
+        window.location.href = "/index/order/confirm_order?mid="+response;
+       }
+      }
+    $.post(url,data,success,'json');
+  });
+  
+  
+  </script>
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+<footer>
+ <section class="Otherlink">
+  <aside>
+   <div class="ewm-left">
+    <p>手机扫描二维码：</p>
+    <img src="/images/Android_ico_d.gif">
+    <img src="/images/iphone_ico_d.gif">
+   </div>
+   <div class="tips">
+    <p>客服热线</p>
+    <p><i>1830927**73</i></p>
+    <p>配送时间</p>
+    <p><time>09：00</time>~<time>22:00</time></p>
+    <p>网站公告</p>
+   </div>
+  </aside>
+  <section>
+    <div>
+    <span><i class="i1"></i>配送支付</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">支付方式</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送方式</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">服务费用</a></li>
+    </ul>
+    </div>
+    <div>
+    <span><i class="i2"></i>关于我们</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">招贤纳士</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">网站介绍</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">商家加盟</a></li>
+    </ul>
+    </div>
+    <div>
+    <span><i class="i3"></i>帮助中心</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">服务内容</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">服务介绍</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">常见问题</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">网站地图</a></li>
+    </ul>
+    </div>
+  </section>
+ </section>
+<div class="copyright">© 版权所有 2016 DeathGhost 技术支持：<a href="http://www.deathghost.cn" title="DeathGhost">DeathGhost</a></div>
+</footer>
+<!-- 网易七鱼 -->
+<script src="https://qiyukf.com/script/a7716a8632828bd3a94fb2983bcac6b0.js"></script>
+</body>
+</html>

@@ -1,0 +1,3201 @@
+---------------------------------------------------------------
+[ 2017-07-22T22:00:16+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=3
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3 [运行时间：0.288016s][吞吐率：3.47req/s] [内存消耗：3,193.30kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=423kddf0tt5dggv3o9ooota5v7',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 3 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:00:25+08:00 ] ::1 ::1 GET /
+[ info ] sjw.xiaoyanyanlh.cn/ [运行时间：0.202504s][吞吐率：4.94req/s] [内存消耗：3,299.01kb] [文件加载：51]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.002500s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002500s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.007500s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.007500s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:00:29+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=3
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3 [运行时间：0.289017s][吞吐率：3.46req/s] [内存消耗：2,985.77kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 3 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.007000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:00:32+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.160009s][吞吐率：6.25req/s] [内存消耗：2,207.62kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:00:32+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.234014s][吞吐率：4.27req/s] [内存消耗：3,114.71kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.007000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:00:35+08:00 ] ::1 ::1 GET /index/user/login.html
+[ info ] sjw.xiaoyanyanlh.cn/index/user/login.html [运行时间：0.130007s][吞吐率：7.69req/s] [内存消耗：2,236.20kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/cart?Number=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->login[ C:\wamp64\www\1707\test\WM\think\application\index\controller\User.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\user\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:00:35+08:00 ] ::1 ::1 GET /captcha.html
+[ info ] sjw.xiaoyanyanlh.cn/captcha.html [运行时间：0.122007s][吞吐率：8.20req/s] [内存消耗：1,588.92kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/user/login.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ C:\wamp64\www\1707\test\WM\think\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:00:45+08:00 ] ::1 ::1 POST /index/user/checks
+[ info ] sjw.xiaoyanyanlh.cn/index/user/checks [运行时间：0.165003s][吞吐率：6.06req/s] [内存消耗：2,335.05kb] [文件加载：45]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'checks',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '32',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'user' => 'sjwsjw',
+  'pwd' => 'sjwsjw',
+  'code' => '4657',
+)
+[ info ] [ RUN ] app\index\controller\User->checks[ C:\wamp64\www\1707\test\WM\think\application\index\controller\User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012501s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] select * from order_user where username='sjwsjw' AND password='3627815ad56a2e0bc2eeae77224a86f9' [ RunTime:0.007500s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:00:48+08:00 ] ::1 ::1 GET /index/index/index
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index [运行时间：0.205603s][吞吐率：4.86req/s] [内存消耗：3,093.64kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/user/checks',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002500s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002500s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.007500s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:00:52+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=1 [运行时间：0.199011s][吞吐率：5.02req/s] [内存消耗：2,986.88kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.007000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:00:54+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.107006s][吞吐率：9.35req/s] [内存消耗：1,901.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:00:54+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.216012s][吞吐率：4.63req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.008000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:02:05+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.103006s][吞吐率：9.71req/s] [内存消耗：1,901.92kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:03:32+08:00 ] ::1 ::1 GET /index/index/index
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index [运行时间：0.223013s][吞吐率：4.48req/s] [内存消耗：3,094.34kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/user/checks',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.006000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:03:34+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.203011s][吞吐率：4.93req/s] [内存消耗：3,194.28kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.007000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:03:41+08:00 ] ::1 ::1 GET /index/index/cart?Number=6
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=6 [运行时间：0.189010s][吞吐率：5.29req/s] [内存消耗：1,901.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '6',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:03:41+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.332019s][吞吐率：3.01req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '7',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => 'NaN',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.006000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:07:01+08:00 ] ::1 ::1 GET /index/index/cart?Number=6
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=6 [运行时间：0.236013s][吞吐率：4.24req/s] [内存消耗：1,901.92kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '6',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:07:03+08:00 ] ::1 ::1 GET /index/index/cart?Number=6
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=6 [运行时间：0.142008s][吞吐率：7.04req/s] [内存消耗：1,901.92kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '6',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:07:04+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.252014s][吞吐率：3.97req/s] [内存消耗：2,987.63kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:07:06+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.256015s][吞吐率：3.91req/s] [内存消耗：2,987.83kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:07:13+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.169010s][吞吐率：5.92req/s] [内存消耗：1,901.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:07:13+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.283016s][吞吐率：3.53req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '7',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => 'NaN',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:09:05+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.147009s][吞吐率：6.80req/s] [内存消耗：1,901.92kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:09:07+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.359021s][吞吐率：2.79req/s] [内存消耗：3,194.28kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:09:08+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.217013s][吞吐率：4.61req/s] [内存消耗：2,987.83kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:09:10+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.131008s][吞吐率：7.63req/s] [内存消耗：1,901.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:09:10+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.237013s][吞吐率：4.22req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '7',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => 'NaN',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:09:21+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.243014s][吞吐率：4.11req/s] [内存消耗：3,194.28kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:09:22+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.220013s][吞吐率：4.55req/s] [内存消耗：2,987.83kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:09:23+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.127007s][吞吐率：7.87req/s] [内存消耗：1,901.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:09:24+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.240014s][吞吐率：4.17req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:12:36+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.247014s][吞吐率：4.05req/s] [内存消耗：3,114.87kb] [文件加载：48]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:12:38+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.200011s][吞吐率：5.00req/s] [内存消耗：2,908.41kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:12:45+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.211012s][吞吐率：4.74req/s] [内存消耗：2,908.41kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:12:56+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.232013s][吞吐率：4.31req/s] [内存消耗：3,194.48kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:13:03+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.129007s][吞吐率：7.75req/s] [内存消耗：1,901.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:13:03+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.249015s][吞吐率：4.02req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:17:42+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.227013s][吞吐率：4.41req/s] [内存消耗：3,194.28kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:17:55+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.136007s][吞吐率：7.35req/s] [内存消耗：1,901.90kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:17:55+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.252014s][吞吐率：3.97req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:17:56+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.229013s][吞吐率：4.37req/s] [内存消耗：2,987.63kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:17:59+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart?Number=1 [运行时间：0.125007s][吞吐率：8.00req/s] [内存消耗：1,901.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:17:59+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.245014s][吞吐率：4.08req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:18:00+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.227013s][吞吐率：4.41req/s] [内存消耗：2,987.63kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:19:31+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.309017s][吞吐率：3.24req/s] [内存消耗：3,186.48kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:19:37+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.133008s][吞吐率：7.52req/s] [内存消耗：1,901.90kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:19:37+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.266016s][吞吐率：3.76req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:19:39+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.217013s][吞吐率：4.61req/s] [内存消耗：2,987.63kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.006000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:13+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.285016s][吞吐率：3.51req/s] [内存消耗：3,194.48kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:18+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.164009s][吞吐率：6.10req/s] [内存消耗：1,901.90kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:43:19+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.245015s][吞吐率：4.08req/s] [内存消耗：3,115.55kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:38+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.256015s][吞吐率：3.91req/s] [内存消耗：3,116.63kb] [文件加载：48]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` = 2 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] UPDATE `order_cart`  SET `num`=num+1  WHERE  `mid` = 2 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:42+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=2
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2 [运行时间：0.203012s][吞吐率：4.93req/s] [内存消耗：2,987.47kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:45+08:00 ] ::1 ::1 GET /index/index/index
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index [运行时间：0.227013s][吞吐率：4.41req/s] [内存消耗：3,093.48kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=2',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:48+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=3
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3 [运行时间：0.215012s][吞吐率：4.65req/s] [内存消耗：2,986.47kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:50+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.227013s][吞吐率：4.41req/s] [内存消耗：2,922.41kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` = 3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 3 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `order_cart` (`mid` , `sid`) VALUES (3 , 2) [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:50+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.266015s][吞吐率：3.76req/s] [内存消耗：3,115.39kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:57+08:00 ] ::1 ::1 GET /index/order/confirm_order
+[ info ] sjw.xiaoyanyanlh.cn/index/order/confirm_order [运行时间：0.242014s][吞吐率：4.13req/s] [内存消耗：3,181.17kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'confirm_order',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/cart.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Order->confirm_order[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\order\confirm_order.html [ array (
+  0 => 'address',
+  1 => 'phone',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_address` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_address` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `phone` FROM `order_user` LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:43:57+08:00 ] ::1 ::1 GET /index/order/selectAddress.html?code=1
+[ info ] sjw.xiaoyanyanlh.cn/index/order/selectAddress.html?code=1 [运行时间：0.162010s][吞吐率：6.17req/s] [内存消耗：1,894.39kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'selectAddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/order/confirm_order',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'code' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Order->selectAddress[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:44:05+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=3
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3 [运行时间：0.234013s][吞吐率：4.27req/s] [内存消耗：2,986.47kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:44:11+08:00 ] ::1 ::1 GET /index/index/shop.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/shop.html [运行时间：0.152009s][吞吐率：6.58req/s] [内存消耗：1,927.81kb] [文件加载：40]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'shop',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-07-22T22:44:14+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=3
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3 [运行时间：0.233013s][吞吐率：4.29req/s] [内存消耗：2,986.47kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 3 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:44:22+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.220012s][吞吐率：4.55req/s] [内存消耗：2,918.94kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` = 3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `order_cart`  SET `num`=num+1  WHERE  `mid` = 3 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:44:22+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.255015s][吞吐率：3.92req/s] [内存消耗：3,115.39kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:44:57+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.262015s][吞吐率：3.82req/s] [内存消耗：2,918.94kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` = 3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `order_cart`  SET `num`=num+1  WHERE  `mid` = 3 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:45:14+08:00 ] ::1 ::1 GET /index/index/index
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index [运行时间：0.245014s][吞吐率：4.08req/s] [内存消耗：3,093.48kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/cart.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.007000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:45:17+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=3
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3 [运行时间：0.220012s][吞吐率：4.55req/s] [内存消耗：2,986.47kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/index',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.007001s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:45:19+08:00 ] ::1 ::1 POST /index/index/cart.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/cart.html [运行时间：0.227013s][吞吐率：4.41req/s] [内存消耗：2,918.94kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` = 3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `order_cart`  SET `num`=num+1  WHERE  `mid` = 3 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:45:19+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] sjw.xiaoyanyanlh.cn/index/index/index/index/cart [运行时间：0.273016s][吞吐率：3.66req/s] [内存消耗：3,115.39kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://sjw.xiaoyanyanlh.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/detailsp?mid=3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '3',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\test\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 'status',
+  1 => 'people',
+  2 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `order_menu` WHERE  `putaway` = 0 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 LIMIT 0,3 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_order` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_order` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `u`.`username`,`u`.`uid`,`o`.`uid` FROM `order_order` `o`,`order_user` `u` WHERE  (  o.uid = u.uid ) [ RunTime:0.006001s ]
+---------------------------------------------------------------
+[ 2017-07-22T22:45:22+08:00 ] ::1 ::1 GET /index/index/detailsp.html
+[ info ] sjw.xiaoyanyanlh.cn/index/index/detailsp.html [运行时间：0.169010s][吞吐率：5.92req/s] [内存消耗：2,015.11kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1707\test\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'sjw.xiaoyanyanlh.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://sjw.xiaoyanyanlh.cn/index/index/cart.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Hm_lvt_080836300300be57b7f34f4b3e97d911=1500605003; PHPSESSID=p33ercskha469oo7i4mnvit5j0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp64\www\1707\test\WM\think\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mid[C:\wamp64\www\1707\test\WM\think\application\index\model\Index.php:19]

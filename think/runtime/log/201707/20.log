@@ -1,0 +1,774 @@
+---------------------------------------------------------------
+[ 2017-07-20T21:19:36+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=1
+[ info ] www.wm.com/index/index/detailsp?mid=1 [运行时间：0.192011s][吞吐率：5.21req/s] [内存消耗：2,440.11kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.073004s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:19:46+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=1
+[ info ] www.wm.com/index/index/detailsp?mid=1 [运行时间：0.194012s][吞吐率：5.15req/s] [内存消耗：2,622.88kb] [文件加载：48]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.083005s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.008001s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:19:50+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] www.wm.com/index/index/index/index/cart [运行时间：0.155008s][吞吐率：6.45req/s] [内存消耗：2,646.89kb] [文件加载：49]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.wm.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:19:50+08:00 ] ::1 ::1 GET /index/index/cart?mid=1
+[ info ] www.wm.com/index/index/cart?mid=1 [运行时间：0.189011s][吞吐率：5.29req/s] [内存消耗：2,438.25kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.029001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` = 1 [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  `mid` = ?' at line 1[C:\wamp\www\WM\think\thinkphp\library\think\db\Connection.php:451]
+---------------------------------------------------------------
+[ 2017-07-20T21:19:52+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=1
+[ info ] www.wm.com/index/index/detailsp?mid=1 [运行时间：0.151009s][吞吐率：6.62req/s] [内存消耗：2,439.88kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:19:55+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] www.wm.com/index/index/index/index/cart [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：2,463.95kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.wm.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:19:55+08:00 ] ::1 ::1 GET /index/index/cart?mid=1
+[ info ] www.wm.com/index/index/cart?mid=1 [运行时间：0.152009s][吞吐率：6.58req/s] [内存消耗：2,438.25kb] [文件加载：50]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` = 1 [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  `mid` = ?' at line 1[C:\wamp\www\WM\think\thinkphp\library\think\db\Connection.php:451]
+---------------------------------------------------------------
+[ 2017-07-20T21:19:59+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=1
+[ info ] www.wm.com/index/index/detailsp?mid=1 [运行时间：0.176010s][吞吐率：5.68req/s] [内存消耗：2,439.88kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.073004s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.005000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:17+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=1
+[ info ] www.wm.com/index/index/detailsp?mid=1 [运行时间：0.208012s][吞吐率：4.81req/s] [内存消耗：2,622.88kb] [文件加载：48]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.076005s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.021001s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:19+08:00 ] ::1 ::1 GET /index/index/detailsp?mid=1
+[ info ] www.wm.com/index/index/detailsp?mid=1 [运行时间：0.211012s][吞吐率：4.74req/s] [内存消耗：2,439.94kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'detailsp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->detailsp[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\detailsp.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.117007s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `s`.`address` FROM `order_menu` `m`,`order_shoper` `s` WHERE  (  m.sid=s.sid ) [ RunTime:0.012001s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:20+08:00 ] ::1 ::1 POST /index/index/index/index/cart
+[ info ] www.wm.com/index/index/index/index/cart [运行时间：0.125007s][吞吐率：8.00req/s] [内存消耗：2,463.95kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'content-length' => '5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.wm.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'mid' => '1',
+  'index' => 'cart',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:20+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] www.wm.com/index/index/cart?Number=1 [运行时间：0.196011s][吞吐率：5.10req/s] [内存消耗：2,623.63kb] [文件加载：48]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` IS NULL [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:49+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] www.wm.com/index/index/cart?Number=1 [运行时间：0.255015s][吞吐率：3.92req/s] [内存消耗：2,448.70kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.079005s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` IS NULL [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:50+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] www.wm.com/index/index/cart?Number=1 [运行时间：0.136008s][吞吐率：7.35req/s] [内存消耗：2,448.70kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` IS NULL [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:52+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] www.wm.com/index/index/cart?Number=1 [运行时间：0.219013s][吞吐率：4.57req/s] [内存消耗：2,448.70kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.065004s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` IS NULL [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:52+08:00 ] ::1 ::1 GET /index/index/cart?Number=1
+[ info ] www.wm.com/index/index/cart?Number=1 [运行时间：0.191011s][吞吐率：5.24req/s] [内存消耗：2,448.70kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'cart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/detailsp?mid=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+  'Number' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->cart[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\cart.html [ array (
+  0 => 're',
+  1 => 'address',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_cart` [ RunTime:0.065003s ]
+[ sql ] [ SQL ] SELECT * FROM `order_cart` WHERE  `mid` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `mid` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `m`.`name`,`m`.`price`,`m`.`picture`,`c`.`num`,`m`.`mid` FROM `order_menu` `m`,`order_cart` `c` WHERE  (  m.mid=c.mid ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT SUM(num) AS tp_sum FROM `order_cart` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `s`.`address`,`c`.`mid` FROM `order_cart` `c`,`order_shoper` `s` WHERE  (  c.sid = s.sid ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-07-20T21:22:54+08:00 ] ::1 ::1 GET /index/index/index
+[ info ] www.wm.com/index/index/index [运行时间：0.196011s][吞吐率：5.10req/s] [内存消耗：2,443.25kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp\www\WM\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wm.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://www.wm.com/index/index/cart?Number=1',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Huiskin=default; PHPSESSID=6ccna976s4bsadupqdts8j8a81; Hm_lvt_080836300300be57b7f34f4b3e97d911=1500433554,1500512354; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1500541375',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp\www\WM\think\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp\www\WM\think\public/../application/index\view\index\index.html [ array (
+  0 => 're',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067003s ] mysql:dbname=order;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_menu` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT * FROM `order_menu` WHERE  `putaway` = 0 [ RunTime:0.001000s ]

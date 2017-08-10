@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>确认订单-DeathGhost</title>
+<meta name="keywords" content="DeathGhost,DeathGhost.cn,web前端设,移动WebApp开发" />
+<meta name="description" content="DeathGhost.cn::H5 WEB前端设计开发!" />
+<meta name="author" content="DeathGhost"/>
+<link href="/style/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/public.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jqpublic.js"></script>
+<script type="text/javascript" src="/js/jquery-1.11.3/jquery.min.js"></script>
+
+<!-- 三级联动插件 -->
+<script language="javascript" src="/js/pcasunzip.js" charset="gb2312"></script>
+</head>
+<body>
+<header>
+ <section class="Topmenubg">
+  <div class="Topnav">
+   <div class="LeftNav">
+    {if empty($Think.session.name || $Think.session.openid)}
+    <a href="/index/user/register">注册</a>
+    /
+    <a href="/index/user/login">登录</a>
+    {else}
+      欢迎，{$Think.session.name}  {$Think.session.nickname}
+    {/if}
+    <a href="#">QQ客服</a><a href="#">微信客服</a>
+   </div>
+   <div class="RightNav">
+    <a href="/index/info/user_center">用户中心</a>
+    <a href="/index/info/user_orderlist" target="_blank" title="我的订单">我的订单</a>
+    <a href="/index/index/cart">购物车
+    (<span style='color:red;'>
+        {if $cart != 0} 
+            {$cart} 
+            {else} 0
+        {/if} </span>)
+    </a>
+    <a href="user_favorites.html" target="_blank" title="我的收藏">我的收藏</a>
+    <a href="/index/user/logout">退出</a>
+   </div>
+  </div>
+ </section>
+ <div class="Logo_search">
+  <div class="Logo">
+    <a href="javascript:confirm('是否放弃提交订单'); if (true) {window.location.href='/index/index/index';}"><img src="/images/logo.jpg" title="DeathGhost" alt="模板"></a>
+   <i></i>
+   <span>西安市 [ <a href="#">莲湖区</a> ]</span>
+  </div>
+  <div class="Search"> 
+   <form method="get" id="main_a_serach" onsubmit="return check_search(this)">
+   <div class="Search_nav" id="selectsearch">
+    <a href="javascript:;" onClick="selectsearch(this,'restaurant_name')" class="choose">餐厅</a>
+    <a href="javascript:;" onClick="selectsearch(this,'food_name')">食物名</a>
+   </div>
+   <div class="Search_area"> 
+   <input type="search" id="fkeyword" name="keyword" placeholder="请输入您所需查找的餐厅名称或食物名称..." class="searchbox" />
+   <input type="submit" class="searchbutton" value="搜 索" />
+   </div>
+   </form>
+   <p class="hotkeywords"><a href="#" title="酸辣土豆丝">酸辣土豆丝</a><a href="#" title="这里是产品名称">螃蟹炒年糕</a><a href="#" title="这里是产品名称">牛奶炖蛋</a><a href="#" title="这里是产品名称">芝麻酱凉面</a><a href="#" title="这里是产品名称">滑蛋虾仁</a><a href="#" title="这里是产品名称">蒜汁茄子</a></p>
+  </div>
+ </div>
+ <nav class="menu_bg">
+  <ul class="menu">
+   <li><a href="index.html">首页</a></li>
+   <li><a href="list.html">订餐</a></li>
+   <li><a href="category.html">积分商城</a></li>
+   <li><a href="article_read.html">关于我们</a></li>
+  </ul>
+ </nav>
+</header>
+<!--Start content-->
+<section class="Psection MT20" id="Cflow">
+<!--如果用户未添加收货地址，则显示如下-->
+ <div class="confirm_addr_f">
+  <span class="flow_title">收货地址：</span>
+  <!--如果未添加地址，则显示此表单-->
+  {if empty($data)}
+  <form class="add_address" action="" style="display:block;" method='post' id='form'>
+   <p><i>收件人姓名:</i><input type="text" name="recipient" required></p>
+   <p>
+      <fieldset style="padding:5px;">
+        <legend style="float:left; font-size:14px; margin-left:40px;"><b>收货地址:</b>
+      </legend>
+        
+        <select name="user.province" id="province" style="height:30px;" required></select>
+        <select name="user.city" id="city" style="height:30px;" required></select>
+        <select name="user.area" id="area" style="height:30px;" required></select><br>
+      </fieldset>
+   </p>
+   <p><i>街道地址:</i><input type="text" required size="50" name='area'></p>
+   <p><i>手机号码:</i><input type="text" name="phone" required pattern="[0-9]{11}"></p>
+   <p><i></i><input name="" type="button" value="确定" id='sub'></p>
+  </form>
+  {else}
+  <!--已保存的地址列表-->
+  <form action="#">
+   <ul class="address">
+   {foreach $data as $value}
+    <li id="style1">
+        <input type="radio" value="" id="1" name="rdColor" onclick="changeColor(1)" required/>
+        <label for="1" id='xyy'>{$value['province']} {$value['address']} （{$value['recipient']}收）
+          <span class="fontcolor">{$value['phone']}</span>
+          <a href="javascript:default()" id='display' style="display:none;" onMouseOver="document.getElementById('display').style.display='block'">设为默认地址</a>
+        </label>
+    </li>
+    {/foreach}
+    <li><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><img src="/images/newaddress.png"/></a></li>
+   </ul>
+   </form>
+   <!--add new address-->
+   <form action="" method='get' id='formid'>
+   <div id="light" class="O-L-content">
+    <ul>
+      <fieldset style="padding:5px;">
+        <legend>收货地址</legend>
+        请选择:
+        <select name="user.province" id="province"></select>
+        <select name="user.city" id="city"></select>
+        <select name="user.area" id="area"></select><br>
+      </fieldset>
+      <li>
+        <span><label for="">街道地址：</label></span>
+        <p>
+          <em>*</em>
+          <textarea name="area" cols="80" rows="5" required></textarea>
+        </p>
+      </li>
+      <li>
+        <span><label for="">收件人姓名：</label></span>
+        <p>
+          <em>*</em>
+          <input name="recipient" type="text" value='' required/>
+        </p>
+      </li>
+      <li>
+        <span><label for="">手机号码：</label></span>
+        <p>
+          <em>*</em>
+          <input name="phone" type="text" pattern="[0-9]{11}" required>
+        </p>
+      </li>
+      <div class="button-a">
+          <input type="button" value="确 定" class="C-button" id='addBtn'/>
+          <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+              <span><input name="" type="button" value="取 消"  class="Cancel-b"/></span>
+          </a>
+      </div>
+      <div class="close-botton"><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"></a></div>
+      </div> 
+   <div id="fade" class="overlay"></div>
+    </ul>
+  {/if}
+   <!--End add new address-->
+   </form>
+ </div>
+
+<!-- 三级联动插件 -->
+<script language="javascript" defer>
+new PCAS("user.province","user.city","user.area","北京市","济南市","济南市");
+
+// ajax添加用户地址
+$(function(){
+$('#addBtn').click(function() {
+    var url = '/index/order/addAddress';
+    var data = $('#formid').serializeArray();
+    var success = function(response) {
+       console.log(response);
+       if (response != '') {
+        //var value = $('.address #xyy');
+        //console.log(value);
+        document.getElementById('light').style.display='none';
+        document.getElementById('fade').style.display='none';
+
+       }
+        window.location.reload();
+      }
+    $.post(url,data,success,'json');
+  });
+})
+
+//初次添加地址
+$('#sub').click(function() {
+  var url = '/index/order/addAddress';
+  var data = $('#form').serializeArray();
+  var success = function(response) {
+    console.log(response);
+    if (response != '') {
+
+    }
+  }
+  $.post(url,data,success,'json');
+});
+
+</script>
+<!--配送方式及支付，则显示如下-->
+<!--check order or add other information-->
+ <div class="pay_delivery">
+  <span class="flow_title">配送方式：</span>
+  <table>
+   <th width="30%">配送方式</th>
+   <th width="30%">运费</th>
+   <th width="40%">说明</th>
+   <tr>
+    <td>送货上门</td>
+    <td>￥0.00</td>
+    <td>配送说明信息...</td>
+   </tr>
+  </table>
+  <span class="flow_title">在线支付方式：</span>
+   <form action="#">
+    <ul>
+    <li><input type="radio" name="pay" id="alipay" value="alipay" requireds/><label for="alipay"><i class="alipay"></i></label></li>
+    </ul>
+   </form>
+  </div>
+
+  <form action="/index/order/submit_order" method='post'>
+  <div class="inforlist">
+   <span class="flow_title">商品清单</span>
+   <table>
+    <th>名称</th>
+    <th>数量</th>
+    <th>价格</th>
+    <th>优惠价</th>
+    <th>小计</th>
+    {foreach menuInfo as $value}
+      <tr>
+        <td>{$value['name']}</td>
+        <td>{$value['num']}</td>
+        <td>￥{$value['price']}.00</td>
+        <td>￥{$value['discount']}.00</td>
+        <td>￥{$value['discount'] * $value['num']}.00</td>
+      </tr>
+    {/foreach}
+   </table>
+    <div class="Order_M">
+      <p><em>订单附言:</em><input name=""  type="text"></p>
+    </div>
+    <div class="Sum_infor">
+      <p class="p2">合计：<span>￥{$total}.00</span></p>
+      <input type="submit" value="提交订单" / class="p3button" name='total'>
+      <input type="hidden" name='total' value="{$total - 10}"/>
+      <input type="hidden" name='orderNum' value="{$orderNum}"/>
+    </div>
+   </form>
+ </div>
+</section>
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+<footer>
+ <section class="Otherlink">
+  <aside>
+   <div class="ewm-left">
+    <p>手机扫描二维码：</p>
+    <img src="/images/Android_ico_d.gif">
+    <img src="/images/iphone_ico_d.gif">
+   </div>
+   <div class="tips">
+    <p>客服热线</p>
+    <p><i>1830927**73</i></p>
+    <p>配送时间</p>
+    <p><time>09：00</time>~<time>22:00</time></p>
+    <p>网站公告</p>
+   </div>
+  </aside>
+  <section>
+    <div>
+    <span><i class="i1"></i>配送支付</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">支付方式</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送方式</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">服务费用</a></li>
+    </ul>
+    </div>
+    <div>
+    <span><i class="i2"></i>关于我们</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">招贤纳士</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">网站介绍</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">商家加盟</a></li>
+    </ul>
+    </div>
+    <div>
+    <span><i class="i3"></i>帮助中心</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">服务内容</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">服务介绍</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">常见问题</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">网站地图</a></li>
+    </ul>
+    </div>
+  </section>
+ </section>
+<div class="copyright">© 版权所有 2016 DeathGhost 技术支持：<a href="http://www.deathghost.cn" title="DeathGhost">DeathGhost</a></div>
+</footer>
+</body>
+</html>

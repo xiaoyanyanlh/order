@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>确认订单-DeathGhost</title>
+<meta name="keywords" content="DeathGhost,DeathGhost.cn,web前端设,移动WebApp开发" />
+<meta name="description" content="DeathGhost.cn::H5 WEB前端设计开发!" />
+<meta name="author" content="DeathGhost"/>
+<link href="/style/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/public.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jqpublic.js"></script>
+<script type="text/javascript" src="/js/jquery-1.11.3/jquery.min.js"></script>
+<style type="text/css">
+  #text{display:none;}
+</style>
+</head>
+<body>
+<header>
+ <section class="Topmenubg">
+  <div class="Topnav">
+   <div class="LeftNav">
+    {if empty($Think.session.name || $Think.session.openid)}
+    <a href="/index/user/register">注册</a>
+    /
+    <a href="/index/user/login">登录</a>
+    {else}
+      欢迎，{$Think.session.name}  {$Think.session.nickname}
+    {/if}
+    <a href="#">QQ客服</a><a href="#">微信客服</a>
+   </div>
+   <div class="RightNav">
+    <a href="/index/info/user_center">用户中心</a>
+    <a href="/index/info/user_orderlist" target="_blank" title="我的订单">我的订单</a>
+    <a href="/index/index/cart">购物车
+    (<span style='color:red;'>
+        {if $cart != 0} 
+            {$cart} 
+            {else} 0
+        {/if} </span>)
+    </a>
+    <a href="user_favorites.html" target="_blank" title="我的收藏">我的收藏</a>
+    <a href="/index/user/logout">退出</a>
+   </div>
+  </div>
+ </section>
+ <div class="Logo_search">
+  <div class="Logo">
+    <a href="javascript:confirm('是否放弃提交订单'); if (true) {window.location.href='/index/index/index';}"><img src="/images/logo.jpg" title="DeathGhost" alt="模板"></a>
+   <i></i>
+   <span>西安市 [ <a href="#">莲湖区</a> ]</span>
+  </div>
+  <div class="Search"> 
+   <form method="get" id="main_a_serach" onsubmit="return check_search(this)">
+   <div class="Search_nav" id="selectsearch">
+    <a href="javascript:;" onClick="selectsearch(this,'restaurant_name')" class="choose">餐厅</a>
+    <a href="javascript:;" onClick="selectsearch(this,'food_name')">食物名</a>
+   </div>
+   <div class="Search_area"> 
+   <input type="search" id="fkeyword" name="keyword" placeholder="请输入您所需查找的餐厅名称或食物名称..." class="searchbox" />
+   <input type="submit" class="searchbutton" value="搜 索" />
+   </div>
+   </form>
+   <p class="hotkeywords"><a href="#" title="酸辣土豆丝">酸辣土豆丝</a><a href="#" title="这里是产品名称">螃蟹炒年糕</a><a href="#" title="这里是产品名称">牛奶炖蛋</a><a href="#" title="这里是产品名称">芝麻酱凉面</a><a href="#" title="这里是产品名称">滑蛋虾仁</a><a href="#" title="这里是产品名称">蒜汁茄子</a></p>
+  </div>
+ </div>
+ <nav class="menu_bg">
+  <ul class="menu">
+   <li><a href="index.html">首页</a></li>
+   <li><a href="list.html">订餐</a></li>
+   <li><a href="category.html">积分商城</a></li>
+   <li><a href="article_read.html">关于我们</a></li>
+  </ul>
+ </nav>
+</header>
+
+      <section class="Psection MT20 Textcenter" style="display:block;" id="Aflow">
+        <p class="Font14 Lineheight35 FontW">恭喜你！订单提交成功！</p>
+        <p class="Font14 Lineheight35 FontW">您的订单编号为：
+          <span class="CorRed">{$orderNum}</span>
+        </p>
+        <p class="Font14 Lineheight35 FontW">共计金额：
+          <span class="CorRed">￥{$total}.00</span>
+        </p>
+        <p>
+          <button type="button" class="Lineheight35">
+            <a href="javascript:onclick=pay()" target="_blank" required pattern="[0-9]{6}">支付宝立即支付</a>
+          </button>
+          <input type="password" id='text'/>
+          <button type="button" class="Lineheight35">
+            <a href="/index/info/user_center">进入用户中心</a>
+          </button>
+        </p>
+      </section>
+      <footer>
+         <section class="Otherlink">
+          <aside>
+           <div class="ewm-left">
+            <p>手机扫描二维码：</p>
+            <img src="/images/Android_ico_d.gif">
+            <img src="/images/iphone_ico_d.gif">
+           </div>
+           <div class="tips">
+            <p>客服热线</p>
+            <p><i>1830927**73</i></p>
+            <p>配送时间</p>
+            <p><time>09：00</time>~<time>22:00</time></p>
+            <p>网站公告</p>
+           </div>
+          </aside>
+          <section>
+            <div>
+            <span><i class="i1"></i>配送支付</span>
+            <ul>
+             <li><a href="article_read.html" target="_blank" title="标题">支付方式</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">配送方式</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">服务费用</a></li>
+            </ul>
+            </div>
+            <div>
+            <span><i class="i2"></i>关于我们</span>
+            <ul>
+             <li><a href="article_read.html" target="_blank" title="标题">招贤纳士</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">网站介绍</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">商家加盟</a></li>
+            </ul>
+            </div>
+            <div>
+            <span><i class="i3"></i>帮助中心</span>
+            <ul>
+             <li><a href="article_read.html" target="_blank" title="标题">服务内容</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">服务介绍</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">常见问题</a></li>
+             <li><a href="article_read.html" target="_blank" title="标题">网站地图</a></li>
+            </ul>
+            </div>
+          </section>
+         </section>
+        <div class="copyright">© 版权所有 2016 DeathGhost 技术支持：<a href="http://www.deathghost.cn" title="DeathGhost">DeathGhost</a></div>
+    </footer>
+</body>
+</html>
+<script type="text/javascript">
+  function pay()
+  {
+    var text = document.getElementById('text');
+    var str=prompt("请输入6位支付密码");
+    if(str)
+    {
+      text.style.display = 'block';
+      alert('支付成功');
+        if (true) {
+          window.location.href = '/index/index/index';
+        }
+    }
+  }
+</script>
